@@ -1,0 +1,154 @@
+:root {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+  --clr-neonblue: hsl(216, 96%, 40%);
+  --clr-neonyellow: hsl(76, 62%, 55%);
+  --clr-neonornage: hsl(31, 80%, 50%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--clr-bg);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100vh;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-bg);
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--clr-neonornage);
+}
+
+.button-neon {
+  font-size: 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 1em;
+  border-radius: 0.3em;
+  position: relative;
+  transition: background-color 200ms linear;
+  text-shadow: 0 0 0.5em currentColor, 0 0 0.25em hsl(0 0% 100% / 0.3);
+}
+
+.button-neon::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  transform: perspective(2em) rotateX(30deg) scale(0.8, 0.35);
+  filter: blur(1.5em);
+}
+
+.button-neon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.button-neon:hover::before,
+.button-neon:focus::before {
+  opacity: 1;
+}
+
+.button-neon:hover::after,
+.button-neon:focus::after {
+  opacity: 1;
+}
+
+/*1st button*/
+.button-neon:nth-child(1) {
+  color: var(--clr-neonornage);
+  border: var(--clr-neonornage) 0.125em solid;
+  box-shadow: 0 0 0.5em 0 var(--clr-neonornage),
+    inset 0 0 0.5em 0 var(--clr-neonornage);
+}
+.button-neon:nth-child(1)::before {
+  background: var(--clr-neonornage);
+}
+.button-neon:nth-child(1)::after {
+  box-shadow: 0 0 4em 0.25em var(--clr-neonornage);
+}
+.button-neon:nth-child(1):hover,
+.button-neon:nth-child(1):focus {
+  background: var(--clr-neonornage);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+/*2nd button*/
+.button-neon:nth-child(2) {
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  box-shadow: 0 0 0.5em 0 var(--clr-neon), inset 0 0 0.5em 0 var(--clr-neon);
+}
+.button-neon:nth-child(2)::before {
+  background: var(--clr-neon);
+}
+.button-neon:nth-child(2)::after {
+  box-shadow: 0 0 4em 0.25em var(--clr-neon);
+}
+.button-neon:nth-child(2):hover,
+.button-neon:nth-child(2):focus {
+  background: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+/*3th button*/
+.button-neon:nth-child(3) {
+  color: var(--clr-neonyellow);
+  border: var(--clr-neonyellow) 0.125em solid;
+  box-shadow: 0 0 0.5em 0 var(--clr-neonyellow),
+    inset 0 0 0.5em 0 var(--clr-neonyellow);
+}
+.button-neon:nth-child(3)::before {
+  background: var(--clr-neonyellow);
+}
+.button-neon:nth-child(3)::after {
+  box-shadow: 0 0 4em 0.25em var(--clr-neonyellow);
+}
+.button-neon:nth-child(3):hover,
+.button-neon:nth-child(3):focus {
+  background: var(--clr-neonyellow);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+/*4th button*/
+.button-neon:nth-child(4) {
+  color: var(--clr-neonblue);
+  border: var(--clr-neonblue) 0.125em solid;
+  box-shadow: 0 0 0.5em 0 var(--clr-neonblue),
+    inset 0 0 0.5em 0 var(--clr-neonblue);
+}
+.button-neon:nth-child(4)::before {
+  background: var(--clr-neonblue);
+}
+.button-neon:nth-child(4)::after {
+  box-shadow: 0 0 4em 0.25em var(--clr-neonblue);
+}
+.button-neon:nth-child(4):hover,
+.button-neon:nth-child(4):focus {
+  background: var(--clr-neonblue);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
